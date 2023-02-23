@@ -949,11 +949,14 @@
         </script>
         <!-- Bagian Setting Aplikasi-->
         <script>
-            $("#absen_mulai,#absen_sampai, #absen_pulang_sampai").timepicker({
+            $("#absen_mulai,#absen_sampai,#absen_pulang, #absen_pulang_sampai,#sp_mulai,#sp_sampai,#sp_pulang,#sp_pulang_sampai").timepicker({
                 'timeFormat': 'H:i:s'
             });
             $('#setTimebtn').on('click', function() {
                 $('#absen_mulai').timepicker('setTime', new Date());
+            });
+            $('#setTimebtn2').on('click', function() {
+                $('#sp_mulai').timepicker('setTime', new Date());
             });
 
             $("#resetsettingapp").click(function(event) {

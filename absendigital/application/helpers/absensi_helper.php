@@ -46,3 +46,7 @@ function is_moderator()
         redirect('block');
     }
 }
+
+function hari(){
+    return array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+}

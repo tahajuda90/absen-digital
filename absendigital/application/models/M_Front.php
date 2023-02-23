@@ -10,8 +10,7 @@ class M_Front extends CI_Model
         $bulan = array(1 => "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
         $hari = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
         $this->get_today_date = $hari[(int)date("w")] . ', ' . date("j ") . $bulan[(int)date('m')] . date(" Y");
-        $this->get_datasess = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $this->get_datasess = $this->db->get_where('user', ['username' =>$this->session->userdata('username')])->row_array();
         $this->appsetting = $this->db->get_where('db_setting', ['status_setting' => 1])->row_array();
     }
 
@@ -97,6 +96,19 @@ class M_Front extends CI_Model
                 'maps_absen' => $appsettings['maps_use'] == TRUE ? htmlspecialchars($this->input->post('maps_absen', true)) : 'No Location'
             ];
             $this->db->insert('db_absensi', $data);
+        }
+    }
+    
+    public function do_absen2($username){
+        $appsettings = $this->appsetting;
+        $today = $this->get_today_date;
+        $clocknow = date("H:i:s");
+        $user = $this->db->get_where('user', ['username' =>$username])->row_array();
+        
+        if(date('w') == $appsettings['sp_day']){
+            
+        }else{
+             
         }
     }
 }

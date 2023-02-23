@@ -72,9 +72,60 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="absen_pulang_sampai" class="col-sm-4 col-form-label">Absen Pulang</label>
+                            <label for="absen_pulang" class="col-sm-4 col-form-label">Absen Pulang</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="absen_pulang_sampai" name="absen_pulang_sampai" value="<?= $nameapp = (empty($dataapp['absen_pulang'])) ? '16:00:00' : $dataapp['absen_pulang']; ?>">
+                                <input type="text" class="form-control" id="absen_pulang" name="absen_pulang" value="<?= $nameapp = (empty($dataapp['absen_pulang'])) ? '16:00:00' : $dataapp['absen_pulang']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="absen_pulang_sampai" class="col-sm-4 col-form-label">Batas Absen Pulang</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="absen_pulang_sampai" name="absen_pulang_sampai" value="<?= $nameapp = (empty($dataapp['absen_pulang_to'])) ? '17:00:00' : $dataapp['absen_pulang_to']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sp_day" class="col-sm-4 col-form-label">Sepecial Day</label>
+                            <div class="col-sm-8">
+                                <select id="sp_day" name="sp_day" class="form-control" >
+                                        <?php
+                                        foreach(hari() as $key=>$hari){
+                                            if($dataapp['sp_day'] == $key){
+                                                echo'<option selected value="'.$key.'">'.$hari.'</option>';
+                                            }else{
+                                                echo'<option value="'.$key.'">'.$hari.'</option>';
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sp_mulai" class="col-sm-4 col-form-label">Absen Dimulai Jam</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="sp_mulai" name="sp_mulai" value="<?= $nameapp = (empty($dataapp['sp_mulai'])) ? '06:00:00' : $dataapp['sp_mulai']; ?>">
+                                    <div class="input-group-append">
+                                        <button class="input-group-text" type="button" id="setTimebtn2" tabindex="-1">Set Current Time</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sp_sampai" class="col-sm-4 col-form-label">Batas Absen Masuk</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="sp_sampai" name="sp_sampai" value="<?= $nameapp = (empty($dataapp['sp_mulai_to'])) ? '11:00:00' : $dataapp['sp_mulai_to']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sp_pulang" class="col-sm-4 col-form-label">Absen Pulang</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="sp_pulang" name="sp_pulang" value="<?= $nameapp = (empty($dataapp['sp_pulang'])) ? '16:00:00' : $dataapp['sp_pulang']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sp_pulang_sampai" class="col-sm-4 col-form-label">Batas Absen Pulang</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="sp_pulang_sampai" name="sp_pulang_sampai" value="<?= $nameapp = (empty($dataapp['sp_pulang_to'])) ? '17:00:00' : $dataapp['sp_pulang_to']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">

@@ -688,8 +688,44 @@ class Ajax extends CI_Controller
                 'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
             ],
             [
-                'field' => 'absen_pulang_sampai',
+                'field' => 'absen_pulang',
                 'label' => 'Absen Pulang',
+                'rules' => 'trim|required|xss_clean',
+                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
+            ],
+            [
+                'field' => 'absen_pulang_sampai',
+                'label' => 'Batas Absen Pulang',
+                'rules' => 'trim|required|xss_clean',
+                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
+            ],
+            [
+                'field' => 'sp_day',
+                'label' => 'Sepecial Day',
+                'rules' => 'trim|required|xss_clean',
+                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
+            ],
+            [
+                'field' => 'sp_mulai',
+                'label' => 'Absen Dimulai Jam',
+                'rules' => 'trim|required|xss_clean',
+                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
+            ],
+            [
+                'field' => 'sp_sampai',
+                'label' => 'Batas Absen Masuk',
+                'rules' => 'required|xss_clean',
+                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
+            ],
+            [
+                'field' => 'sp_pulang',
+                'label' => 'Absen Pulang',
+                'rules' => 'trim|required|xss_clean',
+                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
+            ],
+            [
+                'field' => 'sp_pulang_sampai',
+                'label' => 'Batas Absen Pulang',
                 'rules' => 'trim|required|xss_clean',
                 'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
             ]

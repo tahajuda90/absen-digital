@@ -20,9 +20,15 @@ class M_Settings extends CI_Model
                 'nama_app_absensi' => 'Absensi Online',
                 'logo_instansi' => 'default-logo.png',
                 'timezone' => 'Asia/Jakarta',
-                'absen_mulai' => '06:00:00',
-                'absen_mulai_to' => '11:00:00',
-                'absen_pulang' => '16:00:00',
+                'absen_mulai' => '07:00:00',
+                'absen_mulai_to' => '07:30:00',
+                'absen_pulang' => '15:30:00',
+                'absen_pulang_to' => '17:00:00',
+                'sp_day'=>'5',
+                'sp_mulai' => '06:30:00',
+                'sp_mulai_to' => '07:00:00',
+                'sp_pulang' => '14:30:00',
+                'sp_pulang_to' => '16:00:00',
                 'maps_use' => 0
             ];
             $old_image = $this->appsetting['logo_instansi'];
@@ -40,9 +46,15 @@ class M_Settings extends CI_Model
                 'nama_app_absensi' => 'Absensi Online',
                 'logo_instansi' => 'default-logo.png',
                 'timezone' => 'Asia/Jakarta',
-                'absen_mulai' => '06:00:00',
-                'absen_mulai_to' => '11:00:00',
-                'absen_pulang' => '16:00:00',
+                'absen_mulai' => '07:00:00',
+                'absen_mulai_to' => '07:30:00',
+                'absen_pulang' => '15:30:00',
+                'absen_pulang_to' => '17:00:00',
+                'sp_day'=>'5',
+                'sp_mulai' => '06:30:00',
+                'sp_mulai_to' => '07:00:00',
+                'sp_pulang' => '14:30:00',
+                'sp_pulang_to' => '16:00:00',
                 'maps_use' => 0
             ];
             $this->db->insert('db_setting', $data);
@@ -58,7 +70,13 @@ class M_Settings extends CI_Model
             'timezone' =>  htmlspecialchars($this->input->post('timezone_absen')),
             'absen_mulai' =>  htmlspecialchars($this->input->post('absen_mulai')),
             'absen_mulai_to' =>  htmlspecialchars($this->input->post('absen_sampai')),
-            'absen_pulang' =>  htmlspecialchars($this->input->post('absen_pulang_sampai')),
+            'absen_pulang' =>  htmlspecialchars($this->input->post('absen_pulang')),
+            'absen_pulang_to' =>  htmlspecialchars($this->input->post('absen_pulang_sampai')),
+            'sp_day' =>  htmlspecialchars($this->input->post('sp_day')),
+            'sp_mulai' =>  htmlspecialchars($this->input->post('sp_mulai')),
+            'sp_mulai_to' =>  htmlspecialchars($this->input->post('sp_sampai')),
+            'sp_pulang' =>  htmlspecialchars($this->input->post('sp_pulang')),
+            'sp_pulang_to' =>  htmlspecialchars($this->input->post('sp_pulang_sampai')),
             'maps_use' =>  htmlspecialchars($this->input->post('lokasi_absensi'))
         ];
 

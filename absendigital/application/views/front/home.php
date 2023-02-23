@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-5">
+<!--        <div class="col-xl-5">
             <div class="card mb-4">
                 <div class="card-header text-center"><span class="fas fa-clock mr-1"></span>Absensi</div>
                 <div class="card-body text-center">
@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
 
 <!-- Modal QR Code -->
